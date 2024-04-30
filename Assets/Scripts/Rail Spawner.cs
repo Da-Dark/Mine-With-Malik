@@ -11,8 +11,8 @@ public class RailSpawner : MonoBehaviour
     [SerializeField]
     private float railInterval = 3.5f;
     
-    [SerializeField]
-    private Vector3 spawnPos = new Vector3(15.72904f, 3.5f, -7.3093f);
+   // [SerializeField]
+   // private Vector3 spawnPos = new Vector3(15.72904f, 3.5f, -7.3093f);
 
     [SerializeField]
     private float startDelay = 0;
@@ -50,7 +50,7 @@ public class RailSpawner : MonoBehaviour
     {
         if (trackIndex > 0)
         {
-            Instantiate(railPrefab, spawnPos, railPrefab.transform.rotation);
+            Instantiate(railPrefab, transform.position, railPrefab.transform.rotation);
             trackIndex--;
         }
         else
