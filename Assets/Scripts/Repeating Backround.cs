@@ -22,3 +22,4 @@ public class RepeatingBackround : MonoBehaviour
         }
     }
 }
+// make it the same for rail as backround

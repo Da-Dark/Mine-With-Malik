@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     public Vector3 destination = new Vector3 (0, 0, 0);
 
     public float timeRemaining = 60;
+    public float levelDuration = 60;
     public bool timerIsRunning = false;
     public TextMeshProUGUI timeText;
 

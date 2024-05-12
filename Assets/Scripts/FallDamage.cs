@@ -13,7 +13,7 @@ public class FallDamage : MonoBehaviour
         {
             playerHealth = collision.gameObject.GetComponent<PlayerController>();
 
-            //need to damage player
+            
         }
     }
     void Start()

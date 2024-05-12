@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     private Animator[] animators;
     public GameObject shopScreen;
     public GameObject deathScreen;
+    public GameObject damageScreen;
+    public Timer timerScript; // how to call other scripts
+
 
 
     public TextMeshProUGUI healthText;
@@ -33,6 +36,8 @@ public class PlayerController : MonoBehaviour
         Physics.gravity *= gravityModifier;
 
         animators = GetComponentsInChildren<Animator>();
+
+        timerScript = GameObject.Find("Canvas").GetComponent<Timer>(); // when game starts go though everything and find canvas with timer script then set the TimerScript to be what the game is looking for, when checking the canvas for a timer script
     }
 
     // Update is called once per frame
@@ -57,7 +62,7 @@ public class PlayerController : MonoBehaviour
    }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("LevelGround"))
+        if (other.gameObject.CompareTag("LevelGround")) // where player takes damage
         {
             Debug.Log("Hi I respawned");
 
@@ -65,6 +70,14 @@ public class PlayerController : MonoBehaviour
 
             PlayerHealth -= 1;
             healthText.text = "Health: " + PlayerHealth;
+           
+            damageScreen.SetActive(true); // set ouch screen to active when player takes damage
+            
+            StartCoroutine(DisplayDamageScreen());
+           // else
+           // {
+              //  shopScreen.SetActive(false);
+          //  }
 
             if (PlayerHealth == 0) 
             {
@@ -85,14 +98,17 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("inShop", true);
             }
         }
-        if (other.gameObject.CompareTag("End"))
+        if (other.gameObject.CompareTag("End")) // This is where player teleports back
         {
             Debug.Log("Hi Im replaying");
-            
+
             Vector3 startPos = new Vector3(15.72943f, 0.052f, -6.261f);
             transform.position = startPos;
-            
+
+            timerScript.timeRemaining = timerScript.levelDuration; // This will reset the timer and know that timer is running again
+            timerScript.timerIsRunning = true;
         }
+
     }
 
     public void ExitShop ()
@@ -107,7 +123,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    public void quitGame ()
+    public void quitGame () // Use this for future games
     {
         #if UNITY_STANDALONE
         Application.Quit();
@@ -124,6 +140,13 @@ public class PlayerController : MonoBehaviour
     public void RestartGame ()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1;
         //do menu screen and fix this
+    }
+
+    public IEnumerator DisplayDamageScreen()
+    {
+        yield return new WaitForSeconds(1.0f); // display damagfe screen for 1 sec
+        damageScreen.SetActive(false); // then turn it off
     }
 }
