@@ -12,6 +12,7 @@ public class RailSpawner : MonoBehaviour
     public GameObject backBrokenRailPrefab;
     public GameObject slantRailPrefab;
     public GameObject goldBar;
+    public GameObject heartPiece;
 
 
 
@@ -57,21 +58,27 @@ public class RailSpawner : MonoBehaviour
     // GameObject newRail = Instantiate(railPrefab, new Vector3(0,0,0), Quaternion.identity);
       StartCoroutine(spawnRail(interval));
     }
-    void SpawnRail()
+    void SpawnRail(int randomNumberHeart)
     {
-        int randomNumber = Random.Range(0, 3);
+        int randomNumber = Random.Range(0, 4);
         Instantiate(track[randomNumber], transform.position, track[randomNumber].transform.rotation);
 
         int randomNumberGold = Random.Range(0, 2);
-       
+
         if (randomNumberGold > 0)
         {
             Instantiate(goldBar, transform.position + new Vector3 (0, 0.048f, 0), track[randomNumber].transform.rotation);
             
+        }
+
+      /*  if (track[randomNumber] = 3)
+        {
+            Instantiate(heartPiece, transform.position + new Vector3(0, 0.067f, 0), track[3].transform.rotation);
+
 
         }
-       
 
+        /*
 
 
 
@@ -109,8 +116,9 @@ public class RailSpawner : MonoBehaviour
 
         }
 */
-         transform.Translate(Vector3.right * trackWidth); // play around with value & moves the spawner down the line one its own transform position. At with of one track
+        transform.Translate(Vector3.right * trackWidth); // play around with value & moves the spawner down the line one its own transform position. At with of one track
     }
+
     
 }
 // have the smaer track the number of rails it spawns, if the number is 0 then it doesnt spawn a track

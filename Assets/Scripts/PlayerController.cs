@@ -21,7 +21,10 @@ public class PlayerController : MonoBehaviour
     public GameObject deathScreen;
     public GameObject damageScreen;
     public Timer timerScript; // how to call other scripts
-
+    public RailSpawner goldBar;
+    public int gold = 0;
+    public Shop shopScript;
+   
 
 
     public TextMeshProUGUI healthText;
@@ -38,6 +41,9 @@ public class PlayerController : MonoBehaviour
         animators = GetComponentsInChildren<Animator>();
 
         timerScript = GameObject.Find("Canvas").GetComponent<Timer>(); // when game starts go though everything and find canvas with timer script then set the TimerScript to be what the game is looking for, when checking the canvas for a timer script
+
+        shopScript = GameObject.Find("Shop").GetComponent<Shop>();
+        
     }
 
     // Update is called once per frame
@@ -60,7 +66,7 @@ public class PlayerController : MonoBehaviour
      }
 
    }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(UnityEngine.Collider other)
     {
         if (other.gameObject.CompareTag("LevelGround")) // where player takes damage
         {
@@ -109,6 +115,17 @@ public class PlayerController : MonoBehaviour
             timerScript.timerIsRunning = true;
         }
 
+      /*  if (other.gameObject.CompareTag("Gold")) 
+        {
+            if (gold < shopScript.storage)
+            {
+                gold += 1;
+               RailSpawner.goldBar.SetActive(false);
+            }
+            gold += 0;
+           
+        }
+      */
     }
 
     public void ExitShop ()
