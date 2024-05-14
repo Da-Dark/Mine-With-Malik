@@ -21,14 +21,13 @@ public class PlayerController : MonoBehaviour
     public GameObject deathScreen;
     public GameObject damageScreen;
     public Timer timerScript; // how to call other scripts
-    public RailSpawner goldBar;
+    public GameObject goldBar;
     public int gold = 0;
-    public Shop shopScript;
-   
+    public int storage = 5;
 
 
     public TextMeshProUGUI healthText;
-    //public TextMeshProUGUI storageText;
+    public TextMeshProUGUI goldText;
 
 
     Vector3 respawnHeight = new Vector3(15.72904f, 0.45f, -7.3093f);
@@ -41,9 +40,6 @@ public class PlayerController : MonoBehaviour
         animators = GetComponentsInChildren<Animator>();
 
         timerScript = GameObject.Find("Canvas").GetComponent<Timer>(); // when game starts go though everything and find canvas with timer script then set the TimerScript to be what the game is looking for, when checking the canvas for a timer script
-
-        shopScript = GameObject.Find("Shop").GetComponent<Shop>();
-        
     }
 
     // Update is called once per frame
@@ -115,19 +111,32 @@ public class PlayerController : MonoBehaviour
             timerScript.timerIsRunning = true;
         }
 
-      /*  if (other.gameObject.CompareTag("Gold")) 
+        if (other.gameObject.CompareTag("Gold")) // finally!!
         {
-            if (gold < shopScript.storage)
+            if (gold < storage)
             {
-                gold += 1;
-               RailSpawner.goldBar.SetActive(false);
-            }
-            gold += 0;
-           
-        }
-      */
-    }
+                other.gameObject.SetActive(false); // 
 
+                gold += 1;
+            }
+            else
+            {
+                other.gameObject.SetActive(true);
+
+                gold += 0;
+            }
+          
+            UpdateGold();
+
+            
+        }
+      
+    }
+    public void UpdateGold()
+    {
+        goldText.text = "Gold: " + gold + " / " + storage;
+
+    }
     public void ExitShop ()
     {
         inShop = false;

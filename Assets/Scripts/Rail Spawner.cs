@@ -7,35 +7,16 @@ public class RailSpawner : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject railPrefab;
-    public GameObject frontBrokenRailPrefab;
-    public GameObject backBrokenRailPrefab;
-    public GameObject slantRailPrefab;
+    
     public GameObject goldBar;
     public GameObject heartPiece;
 
-
-
-    [SerializeField]
-    private float railInterval = 3.5f;
-    
-   // [SerializeField]
-   // private Vector3 spawnPos = new Vector3(15.72904f, 3.5f, -7.3093f);
 
     [SerializeField]
     private float startDelay = 0;
 
     [SerializeField]
     private float repeatRate = 2;
-
-    [SerializeField]
-    private int trackIndex = 0;
-
-    [SerializeField]
-    private int trackIndexMin = 3;
-
-    [SerializeField]
-    private int trackIndexMax = 6;
 
     public float trackWidth = 0.2f;
 
