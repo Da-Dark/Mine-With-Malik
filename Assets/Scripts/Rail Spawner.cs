@@ -58,7 +58,7 @@ public class RailSpawner : MonoBehaviour
     // GameObject newRail = Instantiate(railPrefab, new Vector3(0,0,0), Quaternion.identity);
       StartCoroutine(spawnRail(interval));
     }
-    void SpawnRail(int randomNumberHeart)
+    void SpawnRail()
     {
         int randomNumber = Random.Range(0, 4);
         Instantiate(track[randomNumber], transform.position, track[randomNumber].transform.rotation);
