@@ -40,6 +40,7 @@ public class Timer : MonoBehaviour
                 timerIsRunning = false;
                 //Move object
                 objectToTeleport.transform.position = destination;
+                GameObject.FindWithTag("RailSpawner").GetComponent<RailSpawner>().StopSpawningRails();
             }
         }
     }

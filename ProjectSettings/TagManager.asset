@@ -11,6 +11,10 @@ TagManager:
   - Shop
   - End
   - Gold
+  - RailwaySegment
+  - Backround
+  - RailSpawner
+  - Rail
   layers:
   - Default
   - TransparentFX

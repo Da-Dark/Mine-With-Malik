@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    [Header("Main Functions")]
     public float speed = 5.0f;
     public float jumpForce = 10.0f;
     private Rigidbody playerRb;
@@ -24,11 +25,14 @@ public class PlayerController : MonoBehaviour
     public GameObject goldBar;
     public int gold = 0;
     public int storage = 5;
+    public Shop shopScipt;
 
 
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI goldText;
 
+    [Header("Extras")]
+    public MoveForward[] backdropItems;
 
     Vector3 respawnHeight = new Vector3(15.72904f, 0.45f, -7.3093f);
 
@@ -46,22 +50,27 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if (!inShop)
-        { 
-        transform.Translate(Vector3.right * Time.deltaTime * speed);
-
-        //  if (Input.GetKeyDown(KeyCode.Space))
-        // {
-        // playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isOnGround = false;
-        }
-        //   }
-     }
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
+            // playerRb.velocity = (((Vector3.forward*-1) * Time.deltaTime * speed)*playerRb.mass) + new Vector3(0, playerRb.velocity.y, 0);
 
-   }
+            if (playerRb.velocity.y > 0)
+                isOnGround = false;
+
+            if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+            {
+               playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                isOnGround = false;
+            }
+        
+        }
+        if (deathScreen.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+                RestartGame();
+        }
+
+    }
     private void OnTriggerEnter(UnityEngine.Collider other)
     {
         if (other.gameObject.CompareTag("LevelGround")) // where player takes damage
@@ -72,22 +81,25 @@ public class PlayerController : MonoBehaviour
 
             PlayerHealth -= 1;
             healthText.text = "Health: " + PlayerHealth;
-           
-            damageScreen.SetActive(true); // set ouch screen to active when player takes damage
-            
-            StartCoroutine(DisplayDamageScreen());
-           // else
-           // {
-              //  shopScreen.SetActive(false);
-          //  }
 
-            if (PlayerHealth == 0) 
+            damageScreen.SetActive(true); // set ouch screen to active when player takes damage
+
+            StartCoroutine(DisplayDamageScreen());
+
+
+            if (PlayerHealth <= 0)
             {
                 deathScreen.SetActive(true);
 
                 Time.timeScale = 0;
             }
-
+            else
+            {
+                foreach (MoveForward backdropItem in backdropItems)
+                {
+                    backdropItem.ResetPosition();
+                }
+            }
         }
         if (other.gameObject.CompareTag("Shop"))
         {
@@ -109,21 +121,25 @@ public class PlayerController : MonoBehaviour
 
             timerScript.timeRemaining = timerScript.levelDuration; // This will reset the timer and know that timer is running again
             timerScript.timerIsRunning = true;
+
+            GameObject[] excessRails = GameObject.FindGameObjectsWithTag("Rail");
+            GameObject[] excessGold = GameObject.FindGameObjectsWithTag("Gold");
+            foreach (GameObject railItem in excessRails)
+                Destroy(railItem);
+            foreach (GameObject goldItem in excessGold)
+                Destroy(goldItem);
+            GameObject.FindWithTag("RailSpawner").GetComponent<RailSpawner>().ResetAndSpawnSomeRails();
+            foreach (MoveForward backdropItem in backdropItems)
+                backdropItem.ResetPosition();
         }
 
         if (other.gameObject.CompareTag("Gold")) // finally!!
         {
             if (gold < storage)
             {
-                other.gameObject.SetActive(false); // 
+                Destroy(other.gameObject);
 
                 gold += 1;
-            }
-            else
-            {
-                other.gameObject.SetActive(true);
-
-                gold += 0;
             }
           
             UpdateGold();
@@ -134,6 +150,7 @@ public class PlayerController : MonoBehaviour
     }
     public void UpdateGold()
     {
+
         goldText.text = "Gold: " + gold + " / " + storage;
 
     }
@@ -174,5 +191,17 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(1.0f); // display damagfe screen for 1 sec
         damageScreen.SetActive(false); // then turn it off
+    }
+    public void RemoveGold(int amount)
+    {
+        gold -= amount;
+    }
+    public void AddHearts(int amount)
+    {
+        PlayerHealth += amount;
+    }
+    public int CompareGold()
+    {
+        return gold;
     }
 }

@@ -12,38 +12,47 @@ public class Shop : MonoBehaviour
     public TextMeshProUGUI BuyStorageText;
     public TextMeshProUGUI BuyHeartsText;
 
-
+    void Start() // initialize cost at shop properly
+    {
+        storageCost = 5;
+        healthCost = 15;
+    }
     public void IncreaseHealth ()
     {
-        if (playerControllerScript.gold >= healthCost)
+        // Debug.Log("Player has " + playerControllerScript.CompareGold() + " gold");
+        // Debug.Log("Health cost " + healthCost + " gold");
+
+        if (playerControllerScript.CompareGold() >= healthCost)
         {
-            playerControllerScript.gold -= healthCost;
-            playerControllerScript.PlayerHealth += 1;
+            playerControllerScript.RemoveGold(healthCost);
+            playerControllerScript.AddHearts(1);
 
             healthCost += 1;
 
-            BuyHeartsText.text = "Buy Hearts $" + healthCost;
+            playerControllerScript.UpdateGold(); // buggy
 
-            playerControllerScript.UpdateGold();
-
-
-
+            
         }
+
+        BuyHeartsText.text = "Buy Hearts $" + healthCost + ".00"; // add .00 to be more consistant
     }
 
 
     public void IncreaseStorage()
     {
-        if (playerControllerScript.gold >= storageCost)
+        // Debug.Log("Player has " + playerControllerScript.CompareGold() + " gold");
+
+        if (playerControllerScript.CompareGold() >= storageCost)
         {
-            playerControllerScript.gold -= storageCost;
+            playerControllerScript.RemoveGold(healthCost);
             playerControllerScript.storage += 5;
 
-            storageCost += 5;
+            storageCost += 5;  
 
-            BuyStorageText.text = "Buy Storage $" + storageCost;
+            playerControllerScript.UpdateGold(); // buggy
 
-            playerControllerScript.UpdateGold();
         }
+        BuyStorageText.text = "Buy Storage $" + storageCost + ".00"; // add .00 to be more consistant
     }
 }
+

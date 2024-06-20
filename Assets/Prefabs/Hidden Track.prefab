@@ -926,12 +926,12 @@ GameObject:
   - component: {fileID: 2903505199176449439}
   - component: {fileID: 4117394109149090516}
   m_Layer: 0
-  m_Name: Train Tracks (13)
+  m_Name: Hidden Track
   m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6708105952692543710
 Transform:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 0.23988846, y: 0.0015933893, z: 0.06733138}
   m_Center: {x: 0.00029619416, y: 0, z: 0}

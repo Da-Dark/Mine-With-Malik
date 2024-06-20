@@ -1337,7 +1337,7 @@ Transform:
   m_GameObject: {fileID: 47271215}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.06500077, y: -0.09395173, z: 0.60300064}
+  m_LocalPosition: {x: -0.08599943, y: -0.09395173, z: 0.60300064}
   m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1886,7 +1886,7 @@ Transform:
   m_GameObject: {fileID: 73808257}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: -1.2025938}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -13.447}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1896,7 +1896,7 @@ Transform:
   - {fileID: 631253079}
   - {fileID: 290546250}
   - {fileID: 1844015877}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &73808260
 MonoBehaviour:
@@ -1905,11 +1905,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73808257}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1001 &74950937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1921,6 +1923,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1978,6 +1984,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2118,7 +2128,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -2479,11 +2489,11 @@ Transform:
   m_GameObject: {fileID: 105410604}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.190285, y: -0.09395173, z: -1.3404045}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
+  m_LocalPosition: {x: 10.190283, y: -0.09395173, z: 4.933405}
+  m_LocalScale: {x: 1.749295, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 121983186}
+  m_Father: {fileID: 510384185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &105410606
 MeshRenderer:
@@ -2562,11 +2572,11 @@ Transform:
   m_GameObject: {fileID: 110340723}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70147985, y: -0.089028604, z: 0.70147985, w: 0.089028604}
-  m_LocalPosition: {x: 10.199948, y: 0.798, z: -1.340405}
-  m_LocalScale: {x: 1.7492949, y: 1.2182056, z: 92.66219}
+  m_LocalPosition: {x: 10.199947, y: 0.798, z: 4.8080006}
+  m_LocalScale: {x: 1.749295, y: 1.2182055, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 121983186}
+  m_Father: {fileID: 510384185}
   m_LocalEulerAnglesHint: {x: 165.534, y: -90, z: 0}
 --- !u!23 &110340725
 MeshRenderer:
@@ -2828,6 +2838,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -2904,19 +2918,17 @@ Transform:
   m_GameObject: {fileID: 120607801}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 0.14604433, z: -2.7695942}
+  m_LocalPosition: {x: 15.643999, y: -0.044398546, z: -15.014}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.62118}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 47271216}
   - {fileID: 937200688}
-  - {fileID: 1830644106}
   - {fileID: 1971026075}
   - {fileID: 1485815321}
-  - {fileID: 1127890264}
   - {fileID: 1233537642}
   - {fileID: 1476416359}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &120607804
 MonoBehaviour:
@@ -2925,11 +2937,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120607801}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &121983184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,20 +2970,17 @@ Transform:
   m_GameObject: {fileID: 121983184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.26, y: 0.14604433, z: -2.4325943}
+  m_LocalPosition: {x: 15.643999, y: -0.044398546, z: -14.677}
   m_LocalScale: {x: 1.3425, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1523189930}
   - {fileID: 545038565}
-  - {fileID: 105410605}
   - {fileID: 1383768061}
   - {fileID: 1434313595}
-  - {fileID: 110340724}
   - {fileID: 2095814484}
   - {fileID: 12901060}
-  - {fileID: 622776071}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &121983187
 MonoBehaviour:
@@ -2978,11 +2989,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 121983184}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1001 &125265977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2994,6 +3007,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3121,7 +3138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7799614582027476891, guid: 57cac154473e85e4cb7ae24b055d1d13, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.894
+      value: 7.927
       objectReference: {fileID: 0}
     - target: {fileID: 7799614582027476891, guid: 57cac154473e85e4cb7ae24b055d1d13, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3129,7 +3146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7799614582027476891, guid: 57cac154473e85e4cb7ae24b055d1d13, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.553
+      value: -7.614
       objectReference: {fileID: 0}
     - target: {fileID: 7799614582027476891, guid: 57cac154473e85e4cb7ae24b055d1d13, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3408,6 +3425,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3903,6 +3924,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168194033}
   m_Mesh: {fileID: 5302568919011541938, guid: c8f2c499c8455fc499e5ba96a18be744, type: 3}
+--- !u!1 &199288439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199288440}
+  - component: {fileID: 199288442}
+  - component: {fileID: 199288441}
+  m_Layer: 0
+  m_Name: Cave Bottom (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &199288440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199288439}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04221137, y: 0.7243723, z: -0.10678613, w: 0.6797792}
+  m_LocalPosition: {x: 10.072369, y: -0.11893821, z: -1.5974778}
+  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1436344068}
+  m_LocalEulerAnglesHint: {x: 5.585, y: 93.052, z: -11.965}
+--- !u!23 &199288441
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199288439}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5a6c9506ef52f9844945b26a6c7a9aa2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &199288442
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199288439}
+  m_Mesh: {fileID: 7384328630774979640, guid: 6f9ec0c491f13ba46a7b3b8c9275cb03, type: 3}
 --- !u!1 &201413985
 GameObject:
   m_ObjectHideFlags: 0
@@ -4012,7 +4116,7 @@ Transform:
   m_GameObject: {fileID: 203902440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: -0.36759472}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -12.612}
   m_LocalScale: {x: 1.3425, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4022,7 +4126,7 @@ Transform:
   - {fileID: 14334716}
   - {fileID: 1905068965}
   - {fileID: 29965935}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &203902443
 MonoBehaviour:
@@ -4031,11 +4135,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203902440}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &206162672
 GameObject:
   m_ObjectHideFlags: 0
@@ -4683,6 +4789,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 249870641}
   m_Mesh: {fileID: 7629811779324647873, guid: 6f9ec0c491f13ba46a7b3b8c9275cb03, type: 3}
+--- !u!1 &278465200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278465202}
+  - component: {fileID: 278465201}
+  m_Layer: 0
+  m_Name: Backround Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &278465201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278465200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d656df5fc99956840b7607340a0e7aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerControllerScript: {fileID: 7059821862700676965}
+  startDelay: 0
+  repeatRate: 2
+  backroundWidth: 0.41
+  backround: {fileID: 6165760519509165075, guid: 75231b97bad03cc46b251678c3378042, type: 3}
+--- !u!4 &278465202
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278465200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.508, y: 0.017, z: -7.96}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &288053596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4839,7 +4994,6 @@ GameObject:
   - component: {fileID: 293119940}
   - component: {fileID: 293119943}
   - component: {fileID: 293119942}
-  - component: {fileID: 293119941}
   m_Layer: 5
   m_Name: Damage Screen
   m_TagString: Untagged
@@ -4869,24 +5023,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.1154, y: 445}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &293119941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293119939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff82fd587e48cad4c9e90e4ddc70128f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 0
-  storageCost: 0
-  healthCost: 0
-  playerControllerScript: {fileID: 0}
-  BuyStorageText: {fileID: 0}
-  BuyHeartsText: {fileID: 0}
 --- !u!114 &293119942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5936,6 +6072,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (69)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -6349,6 +6489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9794874
@@ -6554,7 +6698,7 @@ Transform:
   m_GameObject: {fileID: 398581504}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: 2.9084063}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -9.3359995}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6564,7 +6708,7 @@ Transform:
   - {fileID: 1795685089}
   - {fileID: 219718812}
   - {fileID: 1209688372}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &398581507
 MonoBehaviour:
@@ -6573,11 +6717,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398581504}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &400751842
 GameObject:
   m_ObjectHideFlags: 0
@@ -6661,6 +6807,89 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400751842}
   m_Mesh: {fileID: 5302568919011541938, guid: c8f2c499c8455fc499e5ba96a18be744, type: 3}
+--- !u!1 &405936811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 405936812}
+  - component: {fileID: 405936814}
+  - component: {fileID: 405936813}
+  m_Layer: 0
+  m_Name: Cave Bottom (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &405936812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405936811}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.015157632, y: 0.70694435, z: -0.098200366, w: 0.70025474}
+  m_LocalPosition: {x: -0.082, y: -0.093639135, z: 0.6189999}
+  m_LocalScale: {x: 1.6787335, y: 1.2182046, z: 92.66219}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1881437873}
+  m_LocalEulerAnglesHint: {x: 6.755, y: 90, z: -9.211}
+--- !u!23 &405936813
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405936811}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5a6c9506ef52f9844945b26a6c7a9aa2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &405936814
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405936811}
+  m_Mesh: {fileID: 7384328630774979640, guid: 6f9ec0c491f13ba46a7b3b8c9275cb03, type: 3}
 --- !u!1 &410308594
 GameObject:
   m_ObjectHideFlags: 0
@@ -6999,8 +7228,8 @@ Transform:
   m_GameObject: {fileID: 429694149}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.23225784, y: 0.315, z: 0.551}
-  m_LocalScale: {x: 4.0060883, y: 4.0388165, z: 3.460539}
+  m_LocalPosition: {x: 0.23225784, y: 0.155, z: 0.551}
+  m_LocalScale: {x: 4.0060883, y: 4.0388165, z: 4.49524}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1881437873}
@@ -8066,6 +8295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9794874
@@ -8184,6 +8417,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8380,7 +8617,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 510384185}
-  - component: {fileID: 510384186}
   m_Layer: 0
   m_Name: Background (9)
   m_TagString: Cave
@@ -8397,27 +8633,20 @@ Transform:
   m_GameObject: {fileID: 510384184}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: -8.581}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -20.825405}
   m_LocalScale: {x: 1.3425, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1050093231}
   - {fileID: 1800361055}
   - {fileID: 599598090}
-  m_Father: {fileID: 1479411921}
+  - {fileID: 105410605}
+  - {fileID: 110340724}
+  - {fileID: 622776071}
+  - {fileID: 1830644106}
+  - {fileID: 1127890264}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &510384186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 510384184}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &512230412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93d22c0e49e1e05498801b6829aaca0c, type: 3}
@@ -8600,6 +8829,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9228,6 +9461,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10079,6 +10316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (50)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -10156,11 +10397,11 @@ Transform:
   m_GameObject: {fileID: 622776070}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 10.511207, y: 0.315, z: -0.918}
+  m_LocalPosition: {x: 10.511207, y: 0.315, z: 5.230405}
   m_LocalScale: {x: 9.3525915, y: 4.0388165, z: 3.460539}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 121983186}
+  m_Father: {fileID: 510384185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &622776072
 MeshRenderer:
@@ -10561,6 +10802,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11413,7 +11658,7 @@ Transform:
   m_GameObject: {fileID: 701496927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 13.684521, y: 0.15234686, z: -12.300406}
+  m_LocalPosition: {x: 13.72305, y: 0.15234686, z: -12.300406}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11480,6 +11725,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11793,6 +12042,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12405,6 +12658,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15146,6 +15403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -15371,7 +15632,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 981771684}
-  - component: {fileID: 981771685}
   m_Layer: 0
   m_Name: Background (11)
   m_TagString: Cave
@@ -15388,27 +15648,15 @@ Transform:
   m_GameObject: {fileID: 981771683}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: -9.415998}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -21.660404}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1799880896}
   - {fileID: 1326347153}
   - {fileID: 1767464173}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &981771685
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981771683}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &986041598 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
@@ -15819,6 +16067,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16648,7 +16900,7 @@ Transform:
   m_GameObject: {fileID: 1050093230}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.073379, y: -0.09395173, z: -1.0180893}
+  m_LocalPosition: {x: 10.073379, y: -0.09395173, z: -0.49}
   m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16715,6 +16967,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17906,11 +18162,11 @@ Transform:
   m_GameObject: {fileID: 1127890263}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70147985, y: -0.089028604, z: 0.70147985, w: 0.089028604}
-  m_LocalPosition: {x: 10.199948, y: 0.798, z: -2.52557}
-  m_LocalScale: {x: 1.7492949, y: 1.2182056, z: 92.66219}
+  m_LocalPosition: {x: 10.199947, y: 0.798, z: 4.242571}
+  m_LocalScale: {x: 1.086627, y: 1.2182055, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 120607803}
+  m_Father: {fileID: 510384185}
   m_LocalEulerAnglesHint: {x: 165.534, y: -90, z: 0}
 --- !u!23 &1127890265
 MeshRenderer:
@@ -19047,89 +19303,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188407257}
   m_CullTransparentMesh: 1
---- !u!1 &1199465571
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1199465572}
-  - component: {fileID: 1199465574}
-  - component: {fileID: 1199465573}
-  m_Layer: 0
-  m_Name: Cave Bottom (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1199465572
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199465571}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.088664055, y: -0.09395173, z: 0.6}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1881437873}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1199465573
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199465571}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5a6c9506ef52f9844945b26a6c7a9aa2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1199465574
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1199465571}
-  m_Mesh: {fileID: 7384328630774979640, guid: 6f9ec0c491f13ba46a7b3b8c9275cb03, type: 3}
 --- !u!1 &1207283673
 GameObject:
   m_ObjectHideFlags: 0
@@ -19489,7 +19662,7 @@ Transform:
   m_GameObject: {fileID: 1233537641}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.381, y: 0.315, z: 0.603}
+  m_LocalPosition: {x: 0.22999981, y: 0.315, z: 0.603}
   m_LocalScale: {x: 4.3309064, y: 4.0388165, z: 3.460539}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19618,6 +19791,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19783,6 +19960,7 @@ GameObject:
   - component: {fileID: 1247398340}
   - component: {fileID: 1247398339}
   - component: {fileID: 1247398338}
+  - component: {fileID: 1247398343}
   m_Layer: 0
   m_Name: Plane
   m_TagString: LevelGround
@@ -19883,12 +20061,25 @@ Transform:
   m_GameObject: {fileID: 1247398337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.71, y: -0.559, z: -10.62}
-  m_LocalScale: {x: 0.46576, y: 1, z: 1}
+  m_LocalPosition: {x: 15.71, y: -0.559, z: -17.09}
+  m_LocalScale: {x: 0.2, y: 1, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1247398343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1247398337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7863341a6b58b2418f6206caf0f73ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 1379329894750701743}
 --- !u!1 &1249135501
 GameObject:
   m_ObjectHideFlags: 0
@@ -20387,7 +20578,6 @@ GameObject:
   - component: {fileID: 1292858465}
   - component: {fileID: 1292858468}
   - component: {fileID: 1292858467}
-  - component: {fileID: 1292858466}
   m_Layer: 5
   m_Name: Death Screen
   m_TagString: Untagged
@@ -20415,24 +20605,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 4}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1292858466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1292858464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff82fd587e48cad4c9e90e4ddc70128f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 0
-  storageCost: 0
-  healthCost: 0
-  playerControllerScript: {fileID: 0}
-  BuyStorageText: {fileID: 0}
-  BuyHeartsText: {fileID: 0}
 --- !u!114 &1292858467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21212,6 +21384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -21988,7 +22164,7 @@ Transform:
   m_GameObject: {fileID: 1383768060}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70147985, y: -0.089028604, z: 0.70147985, w: 0.089028604}
-  m_LocalPosition: {x: 0.072, y: 0.798, z: 0.60300016}
+  m_LocalPosition: {x: -0.079000205, y: 0.798, z: 0.60300016}
   m_LocalScale: {x: 1.7492949, y: 1.2182056, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22071,8 +22247,8 @@ Transform:
   m_GameObject: {fileID: 1387651131}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.088664055, y: -0.09395173, z: 0.60300064}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
+  m_LocalPosition: {x: -0.088664055, y: -0.09395173, z: 0.767}
+  m_LocalScale: {x: 2.0396779, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1402449979}
@@ -22214,7 +22390,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 33
@@ -22287,7 +22463,7 @@ Transform:
   m_GameObject: {fileID: 1402449978}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: 3.7434053}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -8.501}
   m_LocalScale: {x: 1.3425, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22297,7 +22473,7 @@ Transform:
   - {fileID: 1273583605}
   - {fileID: 249870642}
   - {fileID: 29271719}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1402449980
 MonoBehaviour:
@@ -22306,11 +22482,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402449978}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &1410384632
 GameObject:
   m_ObjectHideFlags: 0
@@ -22405,6 +22583,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (51)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22859,7 +23041,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436344068}
-  - component: {fileID: 1436344069}
   m_Layer: 0
   m_Name: Background (10)
   m_TagString: Cave
@@ -22876,27 +23057,15 @@ Transform:
   m_GameObject: {fileID: 1436344067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: -7.350999}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -19.595406}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1949840364}
+  - {fileID: 199288440}
   - {fileID: 759618846}
   - {fileID: 684092662}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1436344069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436344067}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1443039359
 GameObject:
   m_ObjectHideFlags: 0
@@ -23125,6 +23294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1453810647}
+  - component: {fileID: 1453810648}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -23147,6 +23317,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1453810648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453810646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff82fd587e48cad4c9e90e4ddc70128f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gold: 0
+  storageCost: 5
+  healthCost: 15
+  playerControllerScript: {fileID: 7059821862700676965}
+  BuyStorageText: {fileID: 1390896268}
+  BuyHeartsText: {fileID: 80380356}
 --- !u!1001 &1454192902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23232,6 +23420,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23837,7 +24029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1479411921
 Transform:
   m_ObjectHideFlags: 0
@@ -23853,18 +24045,6 @@ Transform:
   m_Children:
   - {fileID: 2003192218}
   - {fileID: 1571879130}
-  - {fileID: 1402449979}
-  - {fileID: 510384185}
-  - {fileID: 203902442}
-  - {fileID: 2007236850}
-  - {fileID: 121983186}
-  - {fileID: 120607803}
-  - {fileID: 1881437873}
-  - {fileID: 1436344068}
-  - {fileID: 1966749826}
-  - {fileID: 398581506}
-  - {fileID: 981771684}
-  - {fileID: 73808259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1483028197
@@ -24777,7 +24957,7 @@ Transform:
   m_GameObject: {fileID: 1523189929}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.065, y: -0.09395173, z: 0.60300064}
+  m_LocalPosition: {x: -0.086, y: -0.09395173, z: 0.60300064}
   m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24989,6 +25169,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25291,6 +25475,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26099,6 +26287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (59)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -26162,7 +26354,6 @@ GameObject:
   - component: {fileID: 1646740709}
   - component: {fileID: 1646740708}
   - component: {fileID: 1646740712}
-  - component: {fileID: 1646740713}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -26274,27 +26465,9 @@ MonoBehaviour:
   objectToTeleport: {fileID: 3370735112725082217}
   destination: {x: 29.371, y: 0.0602, z: -16.197}
   timeRemaining: 15
-  levelDuration: 30
+  levelDuration: 15
   timerIsRunning: 0
   timeText: {fileID: 623743542}
---- !u!114 &1646740713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1646740707}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff82fd587e48cad4c9e90e4ddc70128f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 0
-  storageCost: 0
-  healthCost: 0
-  playerControllerScript: {fileID: 7059821862700676965}
-  BuyStorageText: {fileID: 1390896268}
-  BuyHeartsText: {fileID: 80380356}
 --- !u!1 &1650833288
 GameObject:
   m_ObjectHideFlags: 0
@@ -26763,6 +26936,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9794874
@@ -26897,7 +27074,7 @@ Transform:
   m_GameObject: {fileID: 1697035022}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9374373, z: -0, w: 0.3481543}
-  m_LocalPosition: {x: -0.1756, y: 0.0075569004, z: -0.66152}
+  m_LocalPosition: {x: -0.1756, y: -0.021, z: -0.66152}
   m_LocalScale: {x: 1.0404885, y: 18.31562, z: 1.1402248}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27275,6 +27452,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (55)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28175,6 +28356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (66)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -28395,6 +28580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.663054
@@ -28456,6 +28645,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28674,8 +28867,8 @@ Transform:
   m_GameObject: {fileID: 1799880895}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.073379, y: -0.09395173, z: -1.5820853}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
+  m_LocalPosition: {x: 10.073379, y: -0.09395173, z: -1.088}
+  m_LocalScale: {x: 2.3972337, y: 1.2182046, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 981771684}
@@ -29188,13 +29381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830644105}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.190285, y: -0.09395173, z: -2.5255694}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
+  m_LocalRotation: {x: 0.057194702, y: 0.7047899, z: 0.04246591, w: 0.70583045}
+  m_LocalPosition: {x: 10.190036, y: -0.09379038, z: 4.347904}
+  m_LocalScale: {x: 1.0997287, y: 1.2090833, z: 92.6622}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 120607803}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 510384185}
+  m_LocalEulerAnglesHint: {x: 1.196, y: 90, z: 8.082}
 --- !u!23 &1830644107
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29710,14 +29903,14 @@ Transform:
   m_GameObject: {fileID: 1881437871}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: 4.973406}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -7.271}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1199465572}
+  - {fileID: 405936812}
   - {fileID: 892256320}
   - {fileID: 429694150}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1881437874
 MonoBehaviour:
@@ -29726,11 +29919,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881437871}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &1886916563
 GameObject:
   m_ObjectHideFlags: 0
@@ -30249,6 +30444,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train Tracks (40)
       objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.9794874
@@ -30465,89 +30664,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
   m_PrefabInstance: {fileID: 1795133976}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1949840363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1949840364}
-  - component: {fileID: 1949840366}
-  - component: {fileID: 1949840365}
-  m_Layer: 0
-  m_Name: Cave Bottom (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1949840364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949840363}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.073379, y: -0.09395173, z: -1.5820853}
-  m_LocalScale: {x: 1.7492949, y: 1.2182046, z: 92.66219}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1436344068}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1949840365
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949840363}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5a6c9506ef52f9844945b26a6c7a9aa2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1949840366
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949840363}
-  m_Mesh: {fileID: 7384328630774979640, guid: 6f9ec0c491f13ba46a7b3b8c9275cb03, type: 3}
 --- !u!1001 &1950573977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30876,7 +30992,7 @@ Transform:
   m_GameObject: {fileID: 1966749824}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: 0.8624058}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -11.382}
   m_LocalScale: {x: 1.3425, y: 1, z: 0.7429086}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30886,7 +31002,7 @@ Transform:
   - {fileID: 1732762643}
   - {fileID: 1036940993}
   - {fileID: 2085562706}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1966749827
 MonoBehaviour:
@@ -30895,11 +31011,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966749824}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1 &1971026074
 GameObject:
   m_ObjectHideFlags: 0
@@ -30927,7 +31045,7 @@ Transform:
   m_GameObject: {fileID: 1971026074}
   serializedVersion: 2
   m_LocalRotation: {x: 0.70147985, y: -0.089028604, z: 0.70147985, w: 0.089028604}
-  m_LocalPosition: {x: 0.07200091, y: 0.798, z: 0.60300016}
+  m_LocalPosition: {x: -0.07899929, y: 0.798, z: 0.60300016}
   m_LocalScale: {x: 1.7492949, y: 1.2182056, z: 92.66219}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30994,6 +31112,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31409,8 +31531,8 @@ GameObject:
   - component: {fileID: 2005180828}
   - component: {fileID: 2005180829}
   m_Layer: 0
-  m_Name: Spawner
-  m_TagString: Untagged
+  m_Name: Rail Spawner
+  m_TagString: RailSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31452,6 +31574,7 @@ MonoBehaviour:
   - {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
   - {fileID: 7539723972676656534, guid: f3bd75132f049834eb7ec1d305f111d7, type: 3}
   - {fileID: 4478192477707993655, guid: 2776e9de3d4976b43bc7eaf63b3b0e6e, type: 3}
+  - {fileID: 4227067992988501551, guid: 302209fc3f28c4949a28e5ddb030a1f8, type: 3}
 --- !u!1 &2007236848
 GameObject:
   m_ObjectHideFlags: 0
@@ -31478,7 +31601,7 @@ Transform:
   m_GameObject: {fileID: 2007236848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.0645247, y: 0.14604433, z: 1.6784058}
+  m_LocalPosition: {x: 15.644, y: -0.044398546, z: -10.566}
   m_LocalScale: {x: 1.3425, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31488,7 +31611,7 @@ Transform:
   - {fileID: 33232008}
   - {fileID: 1465208921}
   - {fileID: 992433835}
-  m_Father: {fileID: 1479411921}
+  m_Father: {fileID: 2078562594}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2007236851
 MonoBehaviour:
@@ -31497,11 +31620,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007236848}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3f63851ce6f3504bbdac3d38ad003ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1379329894750701743}
+  doDelete: 0
 --- !u!1001 &2008781375
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31513,6 +31638,10 @@ PrefabInstance:
     - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_Name
       value: Train Tracks (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4227067992988501551, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6708105952692543710, guid: e8d53e9d0363d82449a66c832776b7bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32094,6 +32223,46 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071069239}
   m_Mesh: {fileID: 5302568919011541938, guid: c8f2c499c8455fc499e5ba96a18be744, type: 3}
+--- !u!1 &2078562593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078562594}
+  m_Layer: 0
+  m_Name: Backdrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078562594
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078562593}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1402449979}
+  - {fileID: 203902442}
+  - {fileID: 2007236850}
+  - {fileID: 121983186}
+  - {fileID: 120607803}
+  - {fileID: 1881437873}
+  - {fileID: 1966749826}
+  - {fileID: 398581506}
+  - {fileID: 73808259}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2082860849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32328,7 +32497,7 @@ Transform:
   m_GameObject: {fileID: 2095814483}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0.38100052, y: 0.315, z: 0.603}
+  m_LocalPosition: {x: 0.23000032, y: 0.315, z: 0.603}
   m_LocalScale: {x: 4.3309064, y: 4.0388165, z: 3.460539}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53110,8 +53279,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
-  m_CollisionDetection: 0
+  m_Constraints: 114
+  m_CollisionDetection: 2
 --- !u!114 &7059821862700676965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53137,8 +53306,19 @@ MonoBehaviour:
   goldBar: {fileID: 182511454534267611, guid: fd2800747fae66b41beeb7f2786c98ce, type: 3}
   gold: 0
   storage: 5
+  shopScipt: {fileID: 1548844788}
   healthText: {fileID: 1188407259}
   goldText: {fileID: 1016896424}
+  backdropItems:
+  - {fileID: 1402449980}
+  - {fileID: 203902443}
+  - {fileID: 2007236851}
+  - {fileID: 121983187}
+  - {fileID: 120607804}
+  - {fileID: 1881437874}
+  - {fileID: 1966749827}
+  - {fileID: 398581507}
+  - {fileID: 73808260}
 --- !u!65 &7059821862700676966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53146,7 +53326,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3370735112725082217}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 1d1179384862939479490c9563ec4ed2, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -59629,6 +59809,7 @@ SceneRoots:
   - {fileID: 1838082912}
   - {fileID: 542494303}
   - {fileID: 2005180828}
+  - {fileID: 278465202}
   - {fileID: 1247398342}
   - {fileID: 1760077295}
   - {fileID: 1479411921}
@@ -59637,3 +59818,7 @@ SceneRoots:
   - {fileID: 1621021509}
   - {fileID: 435122782}
   - {fileID: 1453810647}
+  - {fileID: 2078562594}
+  - {fileID: 1436344068}
+  - {fileID: 510384185}
+  - {fileID: 981771684}
