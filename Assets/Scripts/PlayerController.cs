@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
             transform.Translate(Vector3.right * Time.deltaTime * speed);
             // playerRb.velocity = (((Vector3.forward*-1) * Time.deltaTime * speed)*playerRb.mass) + new Vector3(0, playerRb.velocity.y, 0);
 
-            if (playerRb.velocity.y > 0)
+            if (playerRb.linearVelocity.y > 0)
                 isOnGround = false;
 
             if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
@@ -123,12 +123,17 @@ public class PlayerController : MonoBehaviour
             timerScript.timerIsRunning = true;
 
             GameObject[] excessRails = GameObject.FindGameObjectsWithTag("Rail");
+
             GameObject[] excessGold = GameObject.FindGameObjectsWithTag("Gold");
+
             foreach (GameObject railItem in excessRails)
                 Destroy(railItem);
+
             foreach (GameObject goldItem in excessGold)
                 Destroy(goldItem);
+
             GameObject.FindWithTag("RailSpawner").GetComponent<RailSpawner>().ResetAndSpawnSomeRails();
+
             foreach (MoveForward backdropItem in backdropItems)
                 backdropItem.ResetPosition();
         }
@@ -189,14 +194,14 @@ public class PlayerController : MonoBehaviour
 
     public IEnumerator DisplayDamageScreen()
     {
-        yield return new WaitForSeconds(1.0f); // display damagfe screen for 1 sec
+        yield return new WaitForSeconds(1.0f); // display damage screen for 1 sec
         damageScreen.SetActive(false); // then turn it off
     }
     public void RemoveGold(int amount)
     {
         gold -= amount;
     }
-    public void AddHearts(int amount)
+    public void AddHearts(int amount) 
     {
         PlayerHealth += amount;
     }

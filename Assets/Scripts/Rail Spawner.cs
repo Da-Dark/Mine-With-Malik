@@ -55,7 +55,7 @@ public class RailSpawner : MonoBehaviour
 
     void SpawnRail()
     {
-            int randomNumber = Random.Range(0, 4);
+            int randomNumber = Random.Range(0, 5);
 
 
             GameObject index = (GameObject)Instantiate(track[randomNumber], transform.position, track[randomNumber].transform.rotation);
@@ -66,25 +66,15 @@ public class RailSpawner : MonoBehaviour
 
 
 
-            int randomNumberGold = Random.Range(0, 2);
-
-
-
-
-            /*  if (track[randomNumber] = 3)
-              {
-                  Instantiate(heartPiece, transform.position + new Vector3(0, 0.067f, 0), track[3].transform.rotation);
-
-
-              }
-      */
+            int randomNumberGold = Random.Range(0, 2); // How often I want the gold to spawn, currently (50%)
 
 
             if (randomNumber == 0)
             {
                 // Instantiate(track[0], transform.position, track[0].transform.rotation);
 
-                Debug.Log("Spawned front rail");
+                Debug.Log("Spawned high rail");
+
 
 
             }
@@ -108,15 +98,26 @@ public class RailSpawner : MonoBehaviour
                //  Instantiate(track[3], transform.position, track[3].transform.rotation);
 
                 goldOffset = 0.225f; //only paste if the platform raises or lowers
-                Debug.Log("Spawned high rail");
+           
+                Debug.Log("Spawned front rail");
+                
+                while (randomNumber == 3)
+                {
+                    randomNumber = Random.Range(0, 4);
+                }
 
-            }
+
+        }
             if (randomNumber == 4)
             {
                 // Instantiate(track[4], transform.position, track[4].transform.rotation);
 
                 Debug.Log("Spawned hidden rail");
-
+                
+                while (randomNumber == 4)
+                {
+                    randomNumber = Random.Range(0, 4);
+                }
             }
 
             if (randomNumberGold > 0)// the gold is raised with the spawned platform

@@ -6,8 +6,8 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     public int gold;
-    public int storageCost = 5;
-    public int healthCost = 15;
+    public int storageCost;
+    public int healthCost;
     public PlayerController playerControllerScript;
     public TextMeshProUGUI BuyStorageText;
     public TextMeshProUGUI BuyHeartsText;
@@ -29,7 +29,7 @@ public class Shop : MonoBehaviour
 
             healthCost += 1;
 
-            playerControllerScript.UpdateGold(); // buggy
+            playerControllerScript.UpdateGold(); // displays users gold amound
 
             
         }
