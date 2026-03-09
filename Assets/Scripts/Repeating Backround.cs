@@ -19,13 +19,18 @@ public class RepeatingBackround : MonoBehaviour
     public float backroundWidth = 0.2f; // fix
 
     public GameObject backround;
-
+    public float lifeTime = 10f;
     void Start()
     {
         startPos = transform.position;
 
         InvokeRepeating("Backround", startDelay, repeatRate);
-    }
+
+        Debug.Log("I printed the backround, sir");
+        // Destroy the GameObject that this script is attached to after 'lifeTime' seconds
+      Destroy(gameObject, lifeTime);
+   
+}
 
     // Update is called once per frame
     void Update()

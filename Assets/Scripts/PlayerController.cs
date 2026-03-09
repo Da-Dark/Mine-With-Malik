@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     [Header("Main Functions")]
     public float speed = 5.0f;
-    public float jumpForce = 10.0f;
+    public float jumpForce = 12.0f;
     private Rigidbody playerRb;
     public float gravityModifier;
     public bool isOnGround = true;
@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public int storage = 5;
     public Shop shopScipt;
 
-
+    public BackgroundRunner backgroundRunner;
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI goldText;
 
@@ -106,7 +106,10 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Hi Im Shopping");
             inShop = true;
             shopScreen.SetActive(true);
-            
+
+            backgroundRunner.GenerateBackground = false;
+            backgroundRunner.ClearBackgrounds();
+
             foreach (var animator in animators)
             {
                 animator.SetBool("inShop", true);
@@ -118,6 +121,10 @@ public class PlayerController : MonoBehaviour
 
             Vector3 startPos = new Vector3(15.72943f, 0.052f, -6.261f);
             transform.position = startPos;
+
+            backgroundRunner.ClearBackgrounds();
+            backgroundRunner.NextBackgroundInstance = -0.9f;
+            backgroundRunner.GenerateBackground = true;
 
             timerScript.timeRemaining = timerScript.levelDuration; // This will reset the timer and know that timer is running again
             timerScript.timerIsRunning = true;
