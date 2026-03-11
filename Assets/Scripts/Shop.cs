@@ -44,7 +44,7 @@ public class Shop : MonoBehaviour
 
         if (playerControllerScript.CompareGold() >= storageCost)
         {
-            playerControllerScript.RemoveGold(healthCost);
+            playerControllerScript.RemoveGold(storageCost);
             playerControllerScript.storage += 5;
 
             storageCost += 5;  

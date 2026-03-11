@@ -59,10 +59,10 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
             {
-               playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 isOnGround = false;
             }
-        
+
         }
         if (deathScreen.activeSelf)
         {
@@ -92,13 +92,6 @@ public class PlayerController : MonoBehaviour
                 deathScreen.SetActive(true);
 
                 Time.timeScale = 0;
-            }
-            else
-            {
-                foreach (MoveForward backdropItem in backdropItems)
-                {
-                    backdropItem.ResetPosition();
-                }
             }
         }
         if (other.gameObject.CompareTag("Shop"))
@@ -140,9 +133,6 @@ public class PlayerController : MonoBehaviour
                 Destroy(goldItem);
 
             GameObject.FindWithTag("RailSpawner").GetComponent<RailSpawner>().ResetAndSpawnSomeRails();
-
-            foreach (MoveForward backdropItem in backdropItems)
-                backdropItem.ResetPosition();
         }
 
         if (other.gameObject.CompareTag("Gold")) // finally!!
@@ -153,12 +143,12 @@ public class PlayerController : MonoBehaviour
 
                 gold += 1;
             }
-          
+
             UpdateGold();
 
-            
+
         }
-      
+
     }
     public void UpdateGold()
     {
@@ -166,7 +156,7 @@ public class PlayerController : MonoBehaviour
         goldText.text = "Gold: " + gold + " / " + storage;
 
     }
-    public void ExitShop ()
+    public void ExitShop()
     {
         inShop = false;
         shopScreen.SetActive(false);
@@ -178,21 +168,21 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-    public void quitGame () // Use this for future games
+    public void quitGame() // Use this for future games
     {
-        #if UNITY_STANDALONE
+#if UNITY_STANDALONE
         Application.Quit();
-        #endif
-        #if UNITY_EDITOR
+#endif
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#endif
     }
     private void OnCollisionEnter(Collision collision)
     {
         isOnGround = true;
     }
 
-    public void RestartGame ()
+    public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Time.timeScale = 1;
@@ -208,7 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         gold -= amount;
     }
-    public void AddHearts(int amount) 
+    public void AddHearts(int amount)
     {
         PlayerHealth += amount;
     }
